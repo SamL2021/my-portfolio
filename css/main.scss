@@ -1,0 +1,194 @@
+@use "core";
+@use "palette";
+@use "typography";
+@use "media";
+
+* {
+    // border: 1px solid red;
+    margin: auto;
+    padding: 0;
+}
+
+html {
+    font-size: typography.$fs-standard;
+}
+
+/* General Styles */
+.page {
+    background-color: palette.$clr-dark; /* For browsers that do not support gradients */
+    background-image: linear-gradient(
+        palette.$clr-dark,
+        palette.$clr-gradient,
+        palette.$clr-dark
+    );
+    margin: 0;
+    font-family: typography.$ff-primary;
+    color: white;
+}
+
+.nav {
+    @include core.flex-center(column);
+    background-color: palette.$clr-accent;
+
+    @include media.tablet {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    &__ul {
+        @extend .nav;
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+
+        &--a {
+            @extend .nav__ul;
+            color: white;
+            text-decoration: none;
+            padding: 10px 0px;
+            font-size: typography.$fs-large;
+        }
+    }
+}
+
+.hero-section {
+    @include core.flex-center(column);
+    background-color: palette.$clr-dark;
+    background-image: url("img/header.jpg");
+    background-size: cover;
+    min-height: 400px;
+    max-height: 800px;
+
+    @include media.tablet {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 550px;
+    }
+}
+
+.text {
+    &__heading {
+        font-size: 5vw;
+        font-family: typography.$ff-primary;
+        font-weight: lighter;
+        text-align: center;
+    }
+}
+
+/* About */
+
+.columns {
+    margin: 30px;
+
+    &--column-one {
+        @extend .columns;
+        margin-top: 0;
+        text-align: justify;
+    }
+
+    &--column-two {
+        @extend .columns;
+        margin-top: 0;
+        text-align: justify;
+    }
+}
+
+// /_ Tech Skills _/
+
+.skills__section {
+    @include core.flex-center(row);
+    background-color: palette.$clr-dark;
+    background-image: url("img/skills.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    max-height: 400px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 2.5vw;
+
+    p {
+        text-align: center;
+    }
+}
+
+// Projects
+
+.projects {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        @extend .projects;
+        text-align: center;
+        font-size: 4vw;
+        font-family: typography.$ff-primary;
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include media.tablet {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.project {
+    border: 10px white solid;
+    margin: 0px;
+    background-color: white;
+    padding-bottom: 40px;
+    margin: 10px;
+    color: palette.$clr-dark;
+    font-family: typography.$ff-captions;
+    text-align: center;
+    max-width: 90vw;
+
+    img {
+        width: 100%;
+    }
+}
+
+/* Contact */
+
+.contact {
+    padding-top: 10px;
+    text-align: center;
+
+    &__icons {
+        @extend .contact;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20vw;
+        padding-right: 20vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &--links {
+            @extend .contact__icons;
+            color: white;
+            text-decoration: none;
+            font-size: 2em;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+/* Footer */
+.footer {
+    border-top: 2px white solid;
+    padding: 20px;
+    text-align: center;
+}
