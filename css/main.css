@@ -97,10 +97,15 @@ html {
   margin: 20px;
   padding: 20px;
   border-radius: 12px;
-  font-size: 2.5vw;
 }
 .skills__section p {
   text-align: center;
+  font-size: 5vw;
+}
+@media (min-width: 768px) {
+  .skills__section p {
+    font-size: 2.5vw;
+  }
 }
 
 .projects, .projects__title {
@@ -109,10 +114,15 @@ html {
 }
 .projects__title {
   text-align: center;
-  font-size: 4vw;
+  font-size: 10vw;
   font-family: "Poppins", sans-serif;
   padding-bottom: 30px;
   padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .projects__title {
+    font-size: 5vw;
+  }
 }
 
 .projects-container {
@@ -132,7 +142,7 @@ html {
   border: 10px white solid;
   margin: 0px;
   background-color: white;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   margin: 10px;
   color: #051e3e;
   font-family: "Indie Flower", cursive;
