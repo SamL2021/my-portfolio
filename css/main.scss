@@ -47,7 +47,10 @@ html {
             color: white;
             text-decoration: none;
             padding: 10px 0px;
-            font-size: typography.$fs-large;
+
+            @include media.laptop {
+                font-size: 1.5vw;
+            }
         }
     }
 }
@@ -70,10 +73,12 @@ html {
 
 .text {
     &__heading {
-        font-size: 5vw;
-        font-family: typography.$ff-primary;
-        font-weight: lighter;
+        font-size: 8vw;
+        font-family: typography.$ff-secondary;
+        text-shadow: 4px 4px black;
+        text-transform: uppercase;
         text-align: center;
+        padding: 10px;
     }
 }
 
@@ -81,6 +86,17 @@ html {
 
 .columns {
     margin: 30px;
+    padding: 10px;
+
+    @include media.laptop {
+        h2 {
+            font-size: 1.8vw;
+        }
+
+        p {
+            font-size: 1.4vw;
+        }
+    }
 
     &--column-one {
         @extend .columns;
@@ -112,6 +128,7 @@ html {
     p {
         text-align: center;
         font-size: 5vw;
+        text-shadow: 2px 2px black;
 
         @include media.tablet {
             font-size: 2.5vw;
@@ -129,7 +146,7 @@ html {
         @extend .projects;
         text-align: center;
         font-size: 10vw;
-        font-family: typography.$ff-primary;
+        font-family: typography.$ff-secondary;
         padding-bottom: 30px;
         padding-top: 20px;
 
@@ -164,6 +181,11 @@ html {
 
     img {
         width: 100%;
+    }
+
+    a:hover {
+        color: palette.$clr-accent;
+        font-weight: bold;
     }
 }
 

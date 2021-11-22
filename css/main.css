@@ -13,7 +13,7 @@ html {
   /* For browsers that do not support gradients */
   background-image: linear-gradient(#051e3e, #651e3e, #051e3e);
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Work Sans", sans-serif;
   color: white;
 }
 
@@ -40,7 +40,11 @@ html {
   color: white;
   text-decoration: none;
   padding: 10px 0px;
-  font-size: 20px;
+}
+@media (min-width: 1200px) {
+  .nav__ul--a {
+    font-size: 1.5vw;
+  }
 }
 
 .hero-section {
@@ -64,15 +68,26 @@ html {
 }
 
 .text__heading {
-  font-size: 5vw;
-  font-family: "Poppins", sans-serif;
-  font-weight: lighter;
+  font-size: 8vw;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 4px 4px black;
+  text-transform: uppercase;
   text-align: center;
+  padding: 10px;
 }
 
 /* About */
 .columns, .columns--column-two, .columns--column-one {
   margin: 30px;
+  padding: 10px;
+}
+@media (min-width: 1200px) {
+  .columns h2, .columns--column-two h2, .columns--column-one h2 {
+    font-size: 1.8vw;
+  }
+  .columns p, .columns--column-two p, .columns--column-one p {
+    font-size: 1.4vw;
+  }
 }
 .columns--column-one {
   margin-top: 0;
@@ -101,6 +116,7 @@ html {
 .skills__section p {
   text-align: center;
   font-size: 5vw;
+  text-shadow: 2px 2px black;
 }
 @media (min-width: 768px) {
   .skills__section p {
@@ -115,7 +131,7 @@ html {
 .projects__title {
   text-align: center;
   font-size: 10vw;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding-bottom: 30px;
   padding-top: 20px;
 }
@@ -151,6 +167,10 @@ html {
 }
 .project img {
   width: 100%;
+}
+.project a:hover {
+  color: #851e3e;
+  font-weight: bold;
 }
 
 /* Contact */
