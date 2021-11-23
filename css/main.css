@@ -1,0 +1,211 @@
+* {
+  margin: auto;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* General Styles */
+.page {
+  background-color: #051e3e;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(#051e3e, #851e3e, #051e3e);
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  color: white;
+}
+
+.nav, .nav__ul, .nav__ul--a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #651e3e;
+}
+@media (min-width: 768px) {
+  .nav, .nav__ul, .nav__ul--a {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+.nav__ul, .nav__ul--a {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+}
+.nav__ul--a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0px;
+}
+@media (min-width: 1200px) {
+  .nav__ul--a {
+    font-size: 1.5vw;
+  }
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #051e3e;
+  background-image: url("img/header-2.jpg");
+  background-size: cover;
+  background-position: bottom;
+  min-height: 300px;
+  max-height: 500px;
+}
+@media (min-width: 768px) {
+  .hero-section {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section {
+    min-height: 600px;
+  }
+}
+
+.text__heading {
+  font-size: 7vw;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 4px 4px black;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+
+/* About */
+.columns, .columns--column-two, .columns--column-one {
+  margin: 30px;
+  padding: 10px;
+}
+@media (min-width: 1200px) {
+  .columns h2, .columns--column-two h2, .columns--column-one h2 {
+    font-size: 1.8vw;
+  }
+  .columns p, .columns--column-two p, .columns--column-one p {
+    font-size: 1.4vw;
+  }
+}
+.columns--column-one {
+  margin-top: 0;
+  text-align: justify;
+}
+.columns--column-two {
+  margin-top: 0;
+  text-align: justify;
+}
+
+.skills__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #051e3e;
+  background-image: url("img/skills.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  max-height: 400px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+}
+.skills__section p {
+  text-align: center;
+  font-size: 5vw;
+  text-shadow: 2px 2px black;
+}
+@media (min-width: 768px) {
+  .skills__section p {
+    font-size: 2.5vw;
+  }
+}
+
+.projects, .projects__title {
+  display: flex;
+  flex-direction: column;
+}
+.projects__title {
+  text-align: center;
+  font-size: 10vw;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .projects__title {
+    font-size: 5vw;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .projects-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.project {
+  border: 10px white solid;
+  margin: 0px;
+  background-color: white;
+  padding-bottom: 30px;
+  margin: 10px;
+  color: #051e3e;
+  font-family: "Indie Flower", cursive;
+  text-align: center;
+  max-width: 90vw;
+}
+.project img {
+  width: 100%;
+}
+.project a:hover {
+  color: #851e3e;
+  font-weight: bold;
+}
+
+/* Contact */
+.contact, .contact__icons, .contact__icons--links {
+  padding-top: 10px;
+  text-align: center;
+}
+.contact__icons, .contact__icons--links {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact__icons--links {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Footer */
+.footer {
+  border-top: 2px white solid;
+  padding: 20px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
