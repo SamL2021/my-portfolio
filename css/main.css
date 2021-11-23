@@ -1,6 +1,7 @@
 * {
   margin: auto;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -11,7 +12,7 @@ html {
 .page {
   background-color: #051e3e;
   /* For browsers that do not support gradients */
-  background-image: linear-gradient(#051e3e, #651e3e, #051e3e);
+  background-image: linear-gradient(#051e3e, #851e3e, #051e3e);
   margin: 0;
   font-family: "Work Sans", sans-serif;
   color: white;
@@ -22,7 +23,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #851e3e;
+  background-color: #651e3e;
 }
 @media (min-width: 768px) {
   .nav, .nav__ul, .nav__ul--a {
@@ -53,22 +54,27 @@ html {
   justify-content: center;
   align-items: center;
   background-color: #051e3e;
-  background-image: url("img/header.jpg");
+  background-image: url("img/header-2.jpg");
   background-size: cover;
-  min-height: 400px;
-  max-height: 800px;
+  background-position: bottom;
+  min-height: 300px;
+  max-height: 500px;
 }
 @media (min-width: 768px) {
   .hero-section {
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
-    min-height: 550px;
+    min-height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section {
+    min-height: 600px;
   }
 }
 
 .text__heading {
-  font-size: 8vw;
+  font-size: 7vw;
   font-family: "Montserrat", sans-serif;
   text-shadow: 4px 4px black;
   text-transform: uppercase;

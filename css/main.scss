@@ -7,6 +7,7 @@
     // border: 1px solid red;
     margin: auto;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -18,7 +19,7 @@ html {
     background-color: palette.$clr-dark; /* For browsers that do not support gradients */
     background-image: linear-gradient(
         palette.$clr-dark,
-        palette.$clr-gradient,
+        palette.$clr-accent,
         palette.$clr-dark
     );
     margin: 0;
@@ -28,7 +29,7 @@ html {
 
 .nav {
     @include core.flex-center(column);
-    background-color: palette.$clr-accent;
+    background-color: palette.$clr-gradient;
 
     @include media.tablet {
         display: flex;
@@ -58,24 +59,29 @@ html {
 .hero-section {
     @include core.flex-center(column);
     background-color: palette.$clr-dark;
-    background-image: url("img/header.jpg");
+    background-image: url("img/header-2.jpg");
     background-size: cover;
-    min-height: 400px;
-    max-height: 800px;
+    background-position: bottom;
+    min-height: 300px;
+    max-height: 500px;
 
     @include media.tablet {
         background-attachment: fixed;
-        background-position: center;
         background-repeat: no-repeat;
-        min-height: 550px;
+        min-height: 500px;
+    }
+
+    @include media.laptop {
+        min-height: 600px;
     }
 }
 
 .text {
     &__heading {
-        font-size: 8vw;
+        font-size: 7vw;
         font-family: typography.$ff-secondary;
         text-shadow: 4px 4px black;
+
         text-transform: uppercase;
         text-align: center;
         padding: 10px;
