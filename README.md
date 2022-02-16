@@ -1,4 +1,5 @@
 # my-portfolio
+** See live: www.samanthalippiatt.com
 My nology portfolio project to showcase the skills learnt in my intensive tech training course.
 
 I created a single page with multiple sections:
